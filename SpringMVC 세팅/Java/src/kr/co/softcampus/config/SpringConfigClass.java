@@ -46,7 +46,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 //	}
 //}
 
-// 
+// AbstractAnnotationConfigDispatcherServletInitializer
 public class SpringConfigClass extends AbstractAnnotationConfigDispatcherServletInitializer {
 	// DispatcherServlet에 매핑할 요청 주소를 세팅한다.
 	@Override
