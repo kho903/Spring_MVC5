@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href='test1'>test1</a>
+	<h1>result1</h1>
+	<h3>requestBean1.data1 : ${requestScope.requestBean1.data1 }</h3>
+	<h3>requestBean1.data2 : ${requestScope.requestBean1.data2 }</h3>
 </body>
 </html>
