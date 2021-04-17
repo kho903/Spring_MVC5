@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableWebMvc
 // 스캔할 패키지를 지정한다.
 @ComponentScan("kr.co.softcampus.controller")
+@ComponentScan("kr.co.softcampus.beans")
 public class ServletAppContext implements WebMvcConfigurer {
 	// Controller의 메서드가 반환하는 jsp의 이름 앞 뒤에 경로와 확장자를 붙혀주도록 설정한다.
 	@Override
