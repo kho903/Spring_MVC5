@@ -23,4 +23,20 @@
 	
 	<!-- 정적파일(이미지, 사운드, 동영상, JS, CSS 등등) 경로 세팅 -->
 	<resources location="/resources/" mapping="/**" />
+	
+	<!-- MessageSource를 등록한다. -->
+	<beans:bean class='org.springframework.context.support.ReloadableResourceBundleMessageSource' id="messageSource">
+		<!-- <beans:property name="basename" value="/WEB-INF/properties/data1" /> 하나만-->
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>/WEB-INF/properties/data1</beans:value>
+				<beans:value>/WEB-INF/properties/data2</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+	
+	<!-- MessageSource를 사용하기 위한 Accessor 등록 -->
+	<beans:bean id="messageSourceAccessor" class='org.springframework.context.support.MessageSourceAccessor'>
+		<beans:constructor-arg ref='messageSource' />
+	</beans:bean>
 </beans:beans>
