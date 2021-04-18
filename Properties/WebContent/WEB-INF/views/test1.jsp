@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href='test1'>test1</a>
+	<h1>test1</h1>
 </body>
 </html>
