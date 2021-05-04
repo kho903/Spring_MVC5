@@ -4,10 +4,13 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import kr.co.softcampus.beans.DataBean1;
+import kr.co.softcampus.validator.DataBean1Validator;
 
 @Controller
 public class TestController {
@@ -25,5 +28,12 @@ public class TestController {
 			return "input_data";
 		}
 		return "input_success";
+	}
+	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		DataBean1Validator validator1 = new DataBean1Validator();
+//		binder.setValidator(validator1);
+		binder.addValidators(validator1); // 여러개
 	}
 }

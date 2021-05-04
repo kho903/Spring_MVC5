@@ -13,6 +13,12 @@
 		
 		data1 : <form:input path="data1"/><br>
 				<form:errors path="data1"/><br/>
+			
+		data2 : <form:input path="data2"/><br>
+				<form:errors path="data2"/><br/>
+			
+		data3 : <form:input path="data3"/><br>
+				<form:errors path="data3"/><br/>
 	
 		<form:button type='submit'>확인</form:button>
 	</form:form>

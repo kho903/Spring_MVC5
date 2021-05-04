@@ -35,7 +35,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 	@Bean
 	public ReloadableResourceBundleMessageSource messageSource() {
 		ReloadableResourceBundleMessageSource res = new ReloadableResourceBundleMessageSource();
-		res.setBasename("/WEB-INF/properties/error_message.properties");
+		res.setBasename("/WEB-INF/properties/error_message");
 		return res;
 	}
 }
